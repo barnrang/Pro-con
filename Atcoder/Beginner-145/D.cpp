@@ -1,7 +1,4 @@
-#include <iostream> 
-#include <algorithm>
-#include <cmath>
-#include <vector>  
+#include <bits/stdc++.h>
 #define ll long long
  
 ll mod = 1000000007;

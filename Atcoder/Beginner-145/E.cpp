@@ -1,7 +1,4 @@
-#include <iostream> 
-#include <algorithm>
-#include <cmath>
-#include <vector>  
+#include <bits/stdc++.h>
 #define ll long long
 
 const int MAX = 6001;
