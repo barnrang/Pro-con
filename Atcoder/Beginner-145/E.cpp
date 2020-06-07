@@ -36,14 +36,13 @@ int main() {
     }
 
     // cout << T << endl;
+    // What's wrong
 
-    for (int i = 1; i < N+1; i++) 
-   { 
-       for (int w = 0; w < MAX; w++) 
-       {
+    for (int i = 1; i < N+1; i++) { 
+       for (int w = 0; w < MAX; w++) {
             if (((w - foods[i].first) >= 0) && ((w - foods[i].first) < T)) {
-                max_hap[i][w] = max(foods[i].second + max_hap[i-1][w - foods[i].first],  max_hap[i-1][w]); 
-                // cout << max_hap[i][w] << " " << w << " " << max_hap[i-1][w - foods[i].first] << endl;
+                max_hap[i][w] = max(foods[i].second + max_hap[i-1][w - foods[i].first], max_hap[i-1][w]); 
+                
             } else {
                 max_hap[i][w] = max_hap[i-1][w];
             }
@@ -51,13 +50,12 @@ int main() {
        } 
    } 
 
-
     ll max_result = 0;
-   for (int i = 0; i < MAX; i++) {
-       if (max_hap[N][i] > max_result) {
-           max_result = max_hap[N][i];
-       }
-   }
+    for (int i = 0; i < MAX; i++) {
+        if (max_hap[N][i] > max_result) {
+            max_result = max_hap[N][i];
+        }
+    }
 
    cout << max_result << endl;
 
